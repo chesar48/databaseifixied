@@ -1,0 +1,24 @@
+{
+  "name": "databaseifixied",
+  "version": "1.0.0",
+  "description": "database ifixied",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chesar48/databaseifixied.git"
+  },
+  "keywords": [
+    "restapi",
+    "main",
+    "database"
+  ],
+  "author": "chesar ajit rizkyawan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chesar48/databaseifixied/issues"
+  },
+  "homepage": "https://github.com/chesar48/databaseifixied#readme"
+}
