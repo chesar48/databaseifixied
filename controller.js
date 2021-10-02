@@ -51,6 +51,103 @@ exports.index = function(req,res){
                 }
             });
     };
+    
+    //get all articles top 5 data\
+    exports.articlestop5 = function (req,res){
+        connection.query('SELECT * from kontent order by id DESC limit 5',
+            function(error, rows, fields){
+                if(error){
+                    console.log(error);
+                }else {
+                    response.ok(rows, res);
+                }
+            });
+    };
+    
+    //get all articles \
+    exports.articlesall = function (req,res){
+        connection.query('SELECT * from kontent order by id DESC',
+            function(error, rows, fields){
+                if(error){
+                    console.log(error);
+                }else {
+                    response.ok(rows, res);
+                }
+            });
+    };
+    
+    //get all parts
+     exports.allParts = function (req,res){
+        connection.query('SELECT * from part order by id ASC',
+            function(error, rows, fields){
+                if(error){
+                    console.log(error);
+                }else {
+                    response.ok(rows, res);
+                }
+            });
+    };
+    
+    //get mcapple all parts
+     exports.allmcParts = function (req,res){
+        connection.query('SELECT * from mc_part order by id ASC',
+            function(error, rows, fields){
+                if(error){
+                    console.log(error);
+                }else {
+                    response.ok(rows, res);
+                }
+            });
+    };
+    
+        //get all acc
+     exports.allAcc = function (req,res){
+        connection.query('SELECT * from acc order by id DESC',
+            function(error, rows, fields){
+                if(error){
+                    console.log(error);
+                }else {
+                    response.ok(rows, res);
+                }
+            });
+    };
+    
+           //get all mcapple acc
+     exports.allmcAcc = function (req,res){
+        connection.query('SELECT * from mc_acc order by id DESC',
+            function(error, rows, fields){
+                if(error){
+                    console.log(error);
+                }else {
+                    response.ok(rows, res);
+                }
+            });
+    };
+    
+            //get all part
+     exports.categoryPart = function (req,res){
+        let kategori = req.params.kategori;
+        connection.query('SELECT * from part WHERE kategori=? order by id DESC',[kategori],
+            function(error, rows, fields){
+                if(error){
+                    console.log(error);
+                }else {
+                    response.ok(rows, res);
+                }
+            });
+    };
+    //get phone data for phone data by phone type
+    exports.PhoneProduct = function (req,res){
+        let id_iphone = req.params.id_iphone;
+        connection.query('SELECT * FROM productip WHERE id_iphone = ?',[id_iphone],
+            function(error, rows, fields){
+                if(error){
+                    console.log(error);
+                }else {
+                    response.ok(rows, res);
+                }
+            });
+    };
    //dataservice
     exports.callingdataservice = function (req,res){
         let user_no = req.params.user_no;

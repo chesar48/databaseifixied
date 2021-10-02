@@ -17,6 +17,16 @@ module.exports = function(app) {
         .get(jsonku.callingdatafromid);
     app.route('/dataservice/:user_no')
         .get(jsonku.callingdataservice);
+        app.route('/allParts')
+        .get(jsonku.allParts);
+    app.route('/allmcParts')
+        .get(jsonku.allmcParts);
+    app.route('/allAcc')
+        .get(jsonku.allAcc);
+    app.route('/allmcAcc')
+        .get(jsonku.allmcAcc);
+        app.route('/categoryPart/:kategori')
+        .get(jsonku.categoryPart);
     app.route('/add')
         .post(jsonku.addiphonedata);
     app.route('/edit')

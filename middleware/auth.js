@@ -1,6 +1,6 @@
 var  connection = require('../konesi');
 var mysql = require('mysql');
-var md5 = require('MD5');
+// var md5 = require('MD5');
 var response = require('../res');
 var jwt = require('jsonwebtoken');
 var config = require('../config/secret');
@@ -11,7 +11,7 @@ exports.registrasi = function(req,res) {
     var post = {
         username: req.body.username,
         email: req.body.email,
-        password: md5(req.body.password),
+        password: req.body.password,
         role: req.body.role,
         tanggal_daftar: new Date()
     }

@@ -17,6 +17,12 @@ routes(app);
 //routes menu from index
 app.use('/auth', require('./middleware'));
 
-app.listen(3001, () => {
+//dont forget to use this for cpanel use
+// app.listen(() => {
+//     console.log("Koneksi Sukses");
+// });
+
+//only use when on local host
+app.listen(3006,() => {
     console.log("Koneksi Sukses");
 });

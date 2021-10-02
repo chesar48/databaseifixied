@@ -1,21 +1,16 @@
 var mysql = require('mysql');
 
-//koneksi database
+// localhost use
 const conn = mysql.createConnection({
     host:'localhost',
     user: 'root',
     password:'',
     database:'ifixied'
 });
+
+//Serveruse
 // const conn = mysql.createConnection({
 //     host:'localhost',
-//     user: 'ifixiedc_ifixied',
-//     password:'88ifixied88',
-//     database:'ifixiedc_ifixied'
-// });
-
-// const conn = mysql.createConnection({
-//     host:'203.190.44.99',
 //     user: 'ifixiedc_ifixied',
 //     password:'88ifixied88',
 //     database:'ifixiedc_ifixied'
