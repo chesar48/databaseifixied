@@ -51,7 +51,9 @@ exports.login = function(req,res){
     }
 
     var query = "SELECT * FROM ?? WHERE ??=? AND ??=?";
-    var table = ["user_jwt", "password", md5(post.password), "email", post.email];
+    // var table = ["user_jwt", "password", md5(post.password), "email", post.email];
+    var table = ["user_jwt", "password", post.password, "email", post.email];
+
 
     query = mysql.format(query,table);
     
